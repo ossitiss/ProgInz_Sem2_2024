@@ -19,9 +19,9 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString
-@Table(name="StudentTable")
+@Table(name="ProfessorTable")
 @Entity
-public class Student {
+public class Professor {
 	
 	@Id
 	@Column(name = "Ids")
@@ -42,7 +42,12 @@ public class Student {
 	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
 	private String surname;
 	
-	public Student(String name, String surname) {
+	@NotNull
+	@Column(name="Degree")
+	private Degree degree;
+	
+	
+	public Professor(String name, String surname) {
 		setName(name);
 		setSurname(surname);
 	}
