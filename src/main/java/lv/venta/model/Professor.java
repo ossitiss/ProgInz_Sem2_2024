@@ -23,11 +23,14 @@ import lombok.ToString;
 @Table(name = "ProfessorTable")
 @Entity
 public class Professor extends Person{
+	
+	/* ID naaks no personas klases
 	@Id
 	@Column(name = "Idp")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Setter(value = AccessLevel.NONE)
 	private int idp;
+	*/
 
 	// TODO uzlabot regex gan vārdam, gan uzvārdam
 	@Column(name = "Name")
@@ -42,7 +45,7 @@ public class Professor extends Person{
 	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
 	private String surname;
 	
-	@NotNull
+	//@NotNull // jaanjem nost jo ar SINGLE inheritance stratēģiju studenti un profesori būs vienaa tabulaa
 	@Column(name="Degree")
 	private Degree degree;
 	

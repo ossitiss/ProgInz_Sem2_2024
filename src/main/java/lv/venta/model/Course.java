@@ -49,7 +49,7 @@ public class Course {
 	
 	
 	@OneToOne
-	@JoinColumn(name = "Idp")//Professor klases kolonnas nosaukums
+	@JoinColumn(name = "Idpe") // taa kaa Professor savu ID dabon Personas klases tad te jaamaina uz IDPE
 	private Professor professor;
 	
 	@OneToMany(mappedBy = "course")

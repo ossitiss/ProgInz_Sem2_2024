@@ -26,11 +26,13 @@ import lombok.ToString;
 @Entity
 public class Student {
 	
+	/* ID naaks no personas klases
 	@Id
 	@Column(name = "Ids")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Setter(value = AccessLevel.NONE)
 	private int ids;
+	*/
 	
 	//TODO uzlabot regex gan vārdam, gan uzvārdam
 	@Column(name = "Name")
