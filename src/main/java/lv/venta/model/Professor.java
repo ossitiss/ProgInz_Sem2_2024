@@ -32,18 +32,6 @@ public class Professor extends Person{
 	private int idp;
 	*/
 
-	// TODO uzlabot regex gan vārdam, gan uzvārdam
-	@Column(name = "Name")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String name;
-
-	@Column(name = "Surname")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String surname;
 	
 	//@NotNull // jaanjem nost jo ar SINGLE inheritance stratēģiju studenti un profesori būs vienaa tabulaa
 	@Column(name="Degree")

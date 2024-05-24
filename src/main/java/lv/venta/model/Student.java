@@ -24,7 +24,7 @@ import lombok.ToString;
 @ToString
 @Table(name="StudentTable")
 @Entity
-public class Student {
+public class Student extends Person{
 	
 	/* ID naaks no personas klases
 	@Id
@@ -34,18 +34,7 @@ public class Student {
 	private int ids;
 	*/
 	
-	//TODO uzlabot regex gan vārdam, gan uzvārdam
-	@Column(name = "Name")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String name;
 	
-	@Column(name = "Surname")
-	@NotNull
-	@Size(min = 3, max = 50)
-	@Pattern(regexp = "[A-ZĒŪĪĻĶĢŠĀŽČŅ]{1}[a-zēūīļķģšāžčņ]+", message = "Only letters and space are allowed")
-	private String surname;
 	
 	@OneToMany(mappedBy = "student")
 	@ToString.Exclude
