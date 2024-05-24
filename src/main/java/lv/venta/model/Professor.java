@@ -22,7 +22,7 @@ import lombok.ToString;
 @ToString
 @Table(name = "ProfessorTable")
 @Entity
-public class Professor {
+public class Professor extends Person{
 	@Id
 	@Column(name = "Idp")
 	@GeneratedValue(strategy = GenerationType.AUTO)
